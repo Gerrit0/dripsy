@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { CSSObject, UseThemeFunction } from '@theme-ui/css'
+import { CSSObject, ThemeDerivedStyles } from '@theme-ui/css'
 import { Platform } from 'react-native'
 import { DripsyFinalTheme } from '../declarations'
 
@@ -45,14 +45,14 @@ const defaultTheme = {
 
 export type ResponsiveSSRStyles = Exclude<
   NonNullable<SxProps>,
-  UseThemeFunction
+  ThemeDerivedStyles
 >[]
 
 const responsive = (
-  styles: Exclude<SxProps, UseThemeFunction>,
+  styles: Exclude<SxProps, ThemeDerivedStyles>,
   { breakpoint }: { breakpoint?: number } = {}
 ) => (theme?: Theme) => {
-  const next: Exclude<SxProps, UseThemeFunction> & {
+  const next: Exclude<SxProps, ThemeDerivedStyles> & {
     responsiveSSRStyles?: ResponsiveSSRStyles
   } = {}
 
@@ -138,8 +138,8 @@ const transforms = [
  * Here we remove web style keys from components to prevent annoying errors on native
  */
 const filterWebStyleKeys = (
-  styleProp: Exclude<SxProps, UseThemeFunction> = {}
-): Exclude<SxProps, UseThemeFunction> => {
+  styleProp: Exclude<SxProps, ThemeDerivedStyles> = {}
+): Exclude<SxProps, ThemeDerivedStyles> => {
   if (Platform.OS == 'web') {
     return styleProp
   }

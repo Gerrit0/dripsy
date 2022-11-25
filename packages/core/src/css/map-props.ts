@@ -11,7 +11,7 @@ type ThemedOptionsWithoutFunctionStyle<
   Record<DefaultStyleKey, Sx | undefined>
 
 export function mapPropsToStyledComponent<
-  ThemeKey extends keyof DripsyFinalTheme
+  ThemeKey extends keyof DripsyFinalTheme & string
 >(
   props: StyledProps<ThemeKey> & {
     breakpoint: number

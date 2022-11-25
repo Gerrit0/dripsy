@@ -182,6 +182,7 @@ export const ExtendG = () => (
 )
 /* should not error */
 export const ExtendH = () => <ExtendedCompWithExtraProps custom={false} />
+// @ts-expect-error should error since "test" is an invalid behavior
 export const ExtendI = () => <ExtendedCompWithExtraProps2 behavior="test" />
 
 /* should not error */

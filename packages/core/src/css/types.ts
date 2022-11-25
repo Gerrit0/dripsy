@@ -315,7 +315,7 @@ export type DripsyVariant<
   ? TokenizeVariants<DripsyFinalTheme>
   : UseStrictVariants extends false
   ? TokenizeVariants<DripsyFinalTheme> | keyof DripsyFinalTheme[ThemeKey]
-  : keyof DripsyFinalTheme[ThemeKey]
+  : keyof DripsyFinalTheme[ThemeKey] & string
 
 export type StyledProps<ThemeKey extends keyof DripsyFinalTheme> = {
   as?: ComponentType<any>

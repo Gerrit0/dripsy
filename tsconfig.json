@@ -1,18 +1,10 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@dripsy/*": ["./packages/*/src"],
-      "dripsy": ["./packages/dripsy/src"]
-    },
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react-native",
-    "lib": ["dom", "esnext"],
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "strict": true,
-    "experimentalDecorators": true,
-    "noUnusedLocals": false
-  },
-  "exclude": ["examples/next-example/*"]
+  "references": [
+    {"path": "./packages/core"},
+    {"path": "./packages/dripsy"},
+    {"path": "./packages/gradient"},
+    {"path": "./examples/example"},
+    {"path": "./examples/next-example"},
+  ],
+  "files": []
 }

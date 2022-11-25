@@ -80,6 +80,7 @@ const useCreateBreakpointIndex = () => {
     })
     return () => {
       if (!unsubscribe?.remove) {
+        // @ts-expect-error compat for old versions
         Dimensions.removeEventListener('change', onChange)
       } else {
         unsubscribe.remove()

@@ -15,5 +15,10 @@
       "@dripsy/*": ["../../packages/*/src"],
       "dripsy": ["../../packages/dripsy/src"]
     }
-  }
+  },
+  "references": [
+    { "path": "../../packages/dripsy" },
+    { "path": "../../packages/core" },
+    { "path": "../../packages/gradient" },
+  ]
 }

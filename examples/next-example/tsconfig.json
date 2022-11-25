@@ -20,5 +20,10 @@
     "jsx": "preserve"
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "references": [
+    { "path": "../../packages/dripsy" },
+    { "path": "../../packages/core" },
+    { "path": "../../packages/gradient" },
+  ]
 }

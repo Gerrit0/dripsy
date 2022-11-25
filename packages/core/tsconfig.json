@@ -1,11 +1,12 @@
 {
   "extends": "expo-module-scripts/tsconfig.base",
   "compilerOptions": {
-    "outDir": "./build"
+    "lib": ["ESNext"],
+    "outDir": "./build",
+    "composite": true,
+    "jsx": "react-native",
+    "skipLibCheck": true
   },
   "include": ["./src"],
-  "exclude": ["**/__mocks__/*", "**/__tests__/*", "examples", "node_modules"],
-  "paths": {
-    "react-native/node_modules/@types/react": ["../node_modules/@types/react"]
-  }
+  "exclude": ["**/__mocks__/*", "**/__tests__/*", "examples", "node_modules"]
 }

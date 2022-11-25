@@ -258,7 +258,7 @@ export type DripsyThemeWithoutIgnoredKeys<Theme = DripsyCustomTheme> = Omit<
     DripsyBaseTheme,
     | 'breakpoints'
     | 'customFonts'
-    | 'useBodyStyles'
+    | 'useRootStyles'
     | 'useLocalStorage'
     | 'useCustomProperties'
     | 'useColorSchemeMediaQuery'
